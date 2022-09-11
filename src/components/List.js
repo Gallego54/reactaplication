@@ -22,7 +22,7 @@ function List( {apiURL, flag} ) {
         if (list.length > 0) {
             const HTMLEl = [];
             Object.keys(list[0]).forEach((e, i) => {
-                HTMLEl.push(<th key={i}>{e}</th>)
+                HTMLEl.push(<th className="table-cell-header" key={i}>{e}</th>)
             });
 
             setKeys(HTMLEl)
@@ -33,7 +33,7 @@ function List( {apiURL, flag} ) {
 
     return (
         
-        <table className="centered-box">
+        <table className="centered-box table-default">
             <thead>
                 <tr>
                     {keys}
@@ -43,9 +43,9 @@ function List( {apiURL, flag} ) {
             {list.map(l => (
                 <tr key={l.ID}>
                     {/* Acopled... */}
-                    <td>{l.ID}</td>
-                    <td>{l.data}</td>
-                    <td><DELETEButton apiURL={"http://localhost:1000/api/data/"+l.ID}/></td>
+                    <td className="table-cell-default" >{l.ID}</td>
+                    <td className="table-cell-default" >{l.data}</td>
+                    <td className="table-cell-default table-small-cell"><DELETEButton apiURL={"http://localhost:1000/api/data/"+l.ID}/></td>
                 </tr>
             ))}
             </tbody>

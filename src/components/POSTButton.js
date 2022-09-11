@@ -17,7 +17,7 @@ function POSTButton( {apiURL, Data} ) {
 
 
   return (
-    <button onClick={() => POSTInfo() }>Enviar</button>
+    <button className="btn-create" onClick={() => POSTInfo() }>Enviar</button>
   );
 }
 

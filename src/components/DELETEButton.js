@@ -15,7 +15,7 @@ function DELETEButton( {apiURL} ) {
 
 
   return (
-    <button onClick={() => DELETEInfo() }>Eliminar</button>
+    <button className="btn-remove" onClick={() => DELETEInfo() }>Eliminar</button>
   );
 }
 
